@@ -11,7 +11,7 @@ public class Student
         Grades.Add(grade);
     }
 
-    public void AddGrades(double[] grades)
+    public void AddGrade(params double[] grades)
     {
         Grades.AddRange(grades);
     }
