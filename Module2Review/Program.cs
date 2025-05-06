@@ -40,5 +40,20 @@ class Program
             }
             Console.Write($"Average- {student.CalculateAverageGrade()}\n");
         }
+        
+        Course economics = new Course();
+        economics.EnrolledStudents = new List<Student>();
+        economics.CourseName = "Economics";
+        economics.CourseCode = "301";
+        economics.AddStudent(reggie);
+        economics.AddStudent(mookie);
+        
+        Console.WriteLine($"{economics.CourseName} {economics.CourseCode}:");
+        foreach (var student in economics.EnrolledStudents)
+        {
+            Console.Write($"{student.Name}\n");
+        }
+
+        Console.Write("have enrolled in this course.");
     }
 }
